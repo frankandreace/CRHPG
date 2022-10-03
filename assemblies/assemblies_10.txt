@@ -1,0 +1,10 @@
+HG002.maternal.f1_assembly_v2_genbank.fa
+HG002.paternal.f1_assembly_v2_genbank.fa
+HG003.hap1.Google.fa
+HG003.hap2.Google.fa
+HG004.hap1.Google.fa
+HG004.hap2.Google.fa
+HG006.hap1.Google.fa
+HG006.hap2.Google.fa
+HG00735.maternal.f1_assembly_v2_genbank.fa
+HG00735.paternal.f1_assembly_v2_genbank.fa

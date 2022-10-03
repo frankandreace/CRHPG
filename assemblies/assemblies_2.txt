@@ -1,0 +1,2 @@
+HG006.hap1.Google.fa
+HG006.hap2.Google.fa
