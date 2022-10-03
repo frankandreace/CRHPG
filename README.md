@@ -4,7 +4,11 @@
 - [Getting Started](#started)
 - [Users' Guide](#uguide)
   - [Datasets generation commands](#dgen)
-  - [Pangenome generation commands](#install)
+  - [Pangenome generation commands](#pgen)
+    - [Bifrost](#bifrost)
+    - [mdbg](#mdbg)
+    - [Minigraph](#minigraph)
+    - [pggb](#pggb)
   - [Region extraction commands](#general)
   - [Getting help](#help)
 [Citing CRHPG](#cite)
@@ -19,10 +23,14 @@ Loci sequences are provided in a folder of this repo and have been downloaded fr
 ---
 
 
-## <a name="dgen"></a>Dataset Generation Commands
+## <a name="uguide"></a>Users' Guide
+
+Here below a guide on how to generate the datasets used for the experiments presented in the CRHPG paper, generate the pangenome using the 4 different tools and run part of the analysis (loci extraction).
+
+### <a name="dgen"></a>Dataset Generation Commands
 In the paper two kind of datasets are used: the ones specific for Minigrah, that have CHM13 as first haplotype and the rest that use no reference genome in the 2 and 10 haplotype samples.
 
-Minigraph needs a list of haplotypes (in fasta file) to be used in succession, one after the other, while the other tools use directly one fasta with all the haplotypes inside.
+Minigraph needs a list of haplotypes (in fasta file) to be used in succession, one after the other, Bifrost a list of haplotypes and the other tools use directly one fasta with all the haplotypes inside.
 
 To generate the file list for minigraph datasets, use 
 
@@ -52,24 +60,50 @@ cat $input_files > $outfile
 ```
 giving as 
 
-## <a name="uguide"></a>Users' Guide
-Tools have been run with their specific command line parameters.
-###MINIGRAPH
-To download Minigraph, visit the [minigraph web page][minigraph]. 
-To generate the file list for the 2,10 and 104 haplotypes datasets, use 
-```sh
-input_files=""
-file_list=assemblies.txt
+### <a name="Pgen"></a>Pangenome Generation Commands
+For each tool a command line will be given. If any parameter has to be changed (except the name of the input file), it will be specified before the actual command.
+The parameters used are based on the tools documentation (github page or readthedocs) and on additional material (for pggb this [paper][dhpr] and [experimental setup page][hdpr_pggb]).
 
-while IFS= read -r line; do
-   input_files="${input_files} $line"
-done < $file_list
+#### <a name="bifrost"></a>Bifrost Pagenome Generation Commands
+To download Bifrost, visit [bifrost web page][bifrost]. 
+Use the .txt files pro
+To run it, use the 
+```sh
+Bifrost build -r $data_dir/assemblies_all.txt -o $graph_dir/bifrost_graph_all_100time -k 100 -t 8 -v -c
 ```
+Replacing the [number_of_threads] with the actual number of threads you want to use (8 for the experiments) and [input_file_list] with the file list generated as descripted above.
+---
+
+#### <a name="mdbg"></a>mdbg Pagenome Generation Commands
+To download mdbg, visit [mdbg web page][mdbg]. 
+To generate the single fasta file for the 2,10 and 104 haplotypes datasets, use the commands specified in the section [dataset][#dgen]
 To run it, use 
 ```sh
-minigraph -cxggs -t 8 CHM13.fa GRCh38.fa hap1.fa ...  > minigraph_pangenome.gfa
+./rust-mdbg/target/release/rust-mdbg [input_dataset.fa] -k 10 -d 0.0001 --minabund 1 --reference --prefix [prefix_name]
+gfatools asm -u  [prefix_name].gfa > [prefix_name].unitigs.gfa
+./rust-mdbg/target/release/to_basespace --gfa [prefix_name].unitigs.gfa --sequences [prefix_name]
 ```
+Replacing the [prefix_name] with the prefix name you want to use for the mdbg files (e.g. mdbg_10) and [input_dataset.fa] with the dataset fasta.
+---
 
+#### <a name="pggb"></a>pggb Pagenome Generation Commands
+To download pggb, visit [pggb web page][pggb]. 
+To generate the single fasta file for the 2,10 and 104 haplotypes datasets, use the commands specified in the section [dataset][#dgen]
+To run it, use 
+```sh
+pggb -i $data_dir/concat1_m.fa -p 98 -s 100000 -n 10 -k 311 -G 13033,13117 -O 0.03 -t 8 -T 8 -Z -o $home/data/graphs/pggb/t1_m
+```
+Replacing the [number_of_threads] with the actual number of threads you want to use (8 for the experiments) and [input_file_list] with the file list generated as descripted above.
+---
+
+#### <a name="minigraph"></a>Minigraph Pagenome Generation Commands
+To download Minigraph, visit [minigraph web page][minigraph]. 
+To generate the file list for the 2,10 and 104 haplotypes datasets, use the commands specified in the section [dataset][#dgen]
+To run it, use 
+```sh
+minigraph -cxggs -t[number_of_threads] [input_file_list] > out.gfa
+```
+Replacing the [number_of_threads] with the actual number of threads you want to use (8 for the experiments) and [input_file_list] with the file list generated as descripted above.
 
 ---
 
@@ -81,3 +115,4 @@ minigraph -cxggs -t 8 CHM13.fa GRCh38.fa hap1.fa ...  > minigraph_pangenome.gfa
 [mdbg]:https://github.com/ekimb/rust-mdbg
 [bifrost]:https://github.com/pmelsted/bifrost
 [hdpr_pggb]:https://github.com/pangenome/HPRCyear1v2genbank
+[dhpr][https://www.biorxiv.org/content/10.1101/2022.07.09.499321v1]
