@@ -132,14 +132,14 @@ Usage example for each tool.
 Please, use the [loci_list], [color_scheme] and [selected_region_fasta] provided in the 'loci' subdirectory (same name for same experiment).
 
 To replicate HLA-E subgraphs extractions, set   
-[loci_list] = ../loci/HLA-E_exp.loci.txt  
-[color_scheme] = ../loci/HLA-E.colors.tsv  
-[selected_region_fasta] = ../loci/HLA-E.fa  
+[loci_list] = 'HLA-E_exp.loci.txt' 
+[color_scheme] = 'HLA-E.colors.tsv' 
+[selected_region_fasta] = 'HLA-E.fa'  
 
 To replicate HLA-A subgraphs extractions, set    
-[loci_list] = ../loci/HLA-A_exp.loci.txt  
-[color_scheme] = ../loci/HLA-A.colors.tsv  
-[selected_region_fasta] = ../HLA-A_region.fa  
+[loci_list] = 'HLA-A_exp.loci.txt'  
+[color_scheme] = 'HLA-A.colors.tsv'  
+[selected_region_fasta] = 'HLA-A_region.fa'  
 
 
 Minigraph pangenome graph:  

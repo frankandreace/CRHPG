@@ -1,14 +1,14 @@
 
 home=../
-query=../loci
+query=$home/loci
 
 tool=$1
 input_file=$2
-loci_list=$3
+loci_list=$query/$3
 threads=$4
 output_folder=$5 
-colour_scheme=$6
-region=$7
+colour_scheme=$query/$6
+region=$query/$7
 
 
 input_name=$(basename $input_file .gfa)
