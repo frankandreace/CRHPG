@@ -189,11 +189,11 @@ Please contact francesco[dot]andreace{at}pasteur[dot]fr.
 [mdbg]:https://github.com/ekimb/rust-mdbg
 [bifrost]:https://github.com/pmelsted/bifrost
 [hdpr_pggb]:https://github.com/pangenome/HPRCyear1v2genbank
-[gfatools]:[https://github.com/lh3/gfatools]
-[minimap2]:[https://github.com/lh3/minimap2]
-[graphaligner]:[https://github.com/maickrau/GraphAligner]
-[odgi]:[https://github.com/pangenome/odgi]
-[bandage]:[https://github.com/rrwick/Bandage]
+[gfatools]:https://github.com/lh3/gfatools
+[minimap2]:https://github.com/lh3/minimap2
+[graphaligner]:https://github.com/maickrau/GraphAligner
+[odgi]:https://github.com/pangenome/odgi
+[bandage]:https://github.com/rrwick/Bandage
 
-[dhpr]:[https://www.biorxiv.org/content/10.1101/2022.07.09.499321v1]
-[pggb_dataset]:[https://github.com/pangenome/pggb/tree/master/data/HLA]
+[dhpr]:https://www.biorxiv.org/content/10.1101/2022.07.09.499321v1
+[pggb_dataset]:https://github.com/pangenome/pggb/tree/master/data/HLA
