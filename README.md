@@ -17,7 +17,7 @@
 ## <a name="started"></a>Getting Started
 This repo contains the commands and the script used to generate the pangenome graphs and the regions used in the CRHPG paper. To cite it, please see [here](#cite).
 The scripts take as granted that the tools have already been installed in the computer/cluster used and the haplotypes have been downloaded.
-To download the haplotypes, you can go to [Google Brain Genomics website][Google Brain Genomics] and [Human Pangenome Reference Consortium website][Human Pangenome Reference Consortium]
+To download the haplotypes, you can go to [Google Brain Genomics website][Google Brain Genomics] and [Human Pangenome Reference Consortium website][Human Pangenome Reference Consortium]. 
 Loci sequences are provided in a folder of this repo and have been downloaded from the NCBI dataset.
 
 ---
@@ -74,7 +74,7 @@ To run it, use the
 Bifrost build -r $data_dir/assemblies_all.txt -o $graph_dir/bifrost_graph_all_100time -k 100 -t 8 -v -c
 ```
 Replacing the [number_of_threads] with the actual number of threads you want to use (8 for the experiments) and [input_file_list] with the file list generated as descripted above.
----
+
 
 #### <a name="mdbg"></a>mdbg Pagenome Generation Commands
 
