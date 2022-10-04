@@ -72,6 +72,7 @@ To run it, use the
 ```sh
 Bifrost build -r $data_dir/assemblies_all.txt -o $graph_dir/bifrost_graph_all_100time -k 100 -t 8 -v -c
 ```
+
 Replacing the [number_of_threads] with the actual number of threads you want to use (8 for the experiments) and [input_file_list] with the file list generated as descripted above.
 ---
 
@@ -85,6 +86,7 @@ To run it, use
 gfatools asm -u  [prefix_name].gfa > [prefix_name].unitigs.gfa
 ./rust-mdbg/target/release/to_basespace --gfa [prefix_name].unitigs.gfa --sequences [prefix_name]
 ```
+
 Replacing the [prefix_name] with the prefix name you want to use for the mdbg files (e.g. mdbg_10) and [input_dataset.fa] with the dataset fasta.
 ---
 
@@ -96,6 +98,7 @@ To run it, use
 ```sh
 pggb -i $data_dir/concat1_m.fa -p 98 -s 100000 -n 10 -k 311 -G 13033,13117 -O 0.03 -t 8 -T 8 -Z -o $home/data/graphs/pggb/t1_m
 ```
+
 Replacing the [number_of_threads] with the actual number of threads you want to use (8 for the experiments) and [input_file_list] with the file list generated as descripted above.
 ---
 
@@ -107,6 +110,7 @@ To run it, use
 ```sh
 minigraph -cxggs -t[number_of_threads] [input_file_list] > out.gfa
 ```
+
 Replacing the [number_of_threads] with the actual number of threads you want to use (8 for the experiments) and [input_file_list] with the file list generated as descripted above.
 
 ---
