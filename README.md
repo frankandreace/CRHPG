@@ -105,7 +105,7 @@ Replacing the [number_of_threads] with the actual number of threads you want to 
 #### <a name="minigraph"></a>Minigraph Pagenome Generation Commands
 
 To download Minigraph, visit [minigraph web page][minigraph]. 
-To generate the file list for the 2,10 and 104 haplotypes datasets, use the commands specified in the section [dataset][#dgen]
+To generate the file list for the 2,10 and 104 haplotypes datasets, use the commands specified in the section [dataset](#dgen)
 To run it, use 
 ```sh
 minigraph -cxggs -t[number_of_threads] [input_file_list] > out.gfa
@@ -123,4 +123,4 @@ Replacing the [number_of_threads] with the actual number of threads you want to 
 [mdbg]:https://github.com/ekimb/rust-mdbg
 [bifrost]:https://github.com/pmelsted/bifrost
 [hdpr_pggb]:https://github.com/pangenome/HPRCyear1v2genbank
-[dhpr][https://www.biorxiv.org/content/10.1101/2022.07.09.499321v1]
+[dhpr]:[https://www.biorxiv.org/content/10.1101/2022.07.09.499321v1]
