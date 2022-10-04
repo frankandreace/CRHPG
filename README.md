@@ -65,6 +65,7 @@ For each tool a command line will be given. If any parameter has to be changed (
 The parameters used are based on the tools documentation (github page or readthedocs) and on additional material (for pggb this [paper][dhpr] and [experimental setup page][hdpr_pggb]).
 
 #### <a name="bifrost"></a>Bifrost Pagenome Generation Commands
+
 To download Bifrost, visit [bifrost web page][bifrost]. 
 Use the .txt files pro
 To run it, use the 
@@ -75,6 +76,7 @@ Replacing the [number_of_threads] with the actual number of threads you want to 
 ---
 
 #### <a name="mdbg"></a>mdbg Pagenome Generation Commands
+
 To download mdbg, visit [mdbg web page][mdbg]. 
 To generate the single fasta file for the 2,10 and 104 haplotypes datasets, use the commands specified in the section [dataset][#dgen]
 To run it, use 
@@ -87,6 +89,7 @@ Replacing the [prefix_name] with the prefix name you want to use for the mdbg fi
 ---
 
 #### <a name="pggb"></a>pggb Pagenome Generation Commands
+
 To download pggb, visit [pggb web page][pggb]. 
 To generate the single fasta file for the 2,10 and 104 haplotypes datasets, use the commands specified in the section [dataset][#dgen]
 To run it, use 
@@ -97,6 +100,7 @@ Replacing the [number_of_threads] with the actual number of threads you want to 
 ---
 
 #### <a name="minigraph"></a>Minigraph Pagenome Generation Commands
+
 To download Minigraph, visit [minigraph web page][minigraph]. 
 To generate the file list for the 2,10 and 104 haplotypes datasets, use the commands specified in the section [dataset][#dgen]
 To run it, use 
