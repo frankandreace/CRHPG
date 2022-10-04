@@ -174,6 +174,9 @@ sh ./scripts/extract_multiple_loci.sh ga_vg [input_graph (without .gfa extension
 ADDITIONAL INFO:  
 [output_folder] should be like : ' ~/my_output_folder ' (no final '/').  
 
+## <a name="help"></a>Getting Help
+
+Please contact francesco[dot]andreace{at}pasteur[dot]fr.  
 
 ## <a name="cite"></a>Citing CRHPG
 
