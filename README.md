@@ -89,7 +89,6 @@ gfatools asm -u  [prefix_name].gfa > [prefix_name].unitigs.gfa
 ```
 
 Replacing the [prefix_name] with the prefix name you want to use for the mdbg files (e.g. mdbg_10) and [input_dataset.fa] with the dataset fasta.
----
 
 #### <a name="pggb"></a>pggb Pagenome Generation Commands
 
@@ -101,7 +100,7 @@ pggb -i $data_dir/concat1_m.fa -p 98 -s 100000 -n 10 -k 311 -G 13033,13117 -O 0.
 ```
 
 Replacing the [number_of_threads] with the actual number of threads you want to use (8 for the experiments) and [input_file_list] with the file list generated as descripted above.
----
+
 
 #### <a name="minigraph"></a>Minigraph Pagenome Generation Commands
 
@@ -114,7 +113,7 @@ minigraph -cxggs -t[number_of_threads] [input_file_list] > out.gfa
 
 Replacing the [number_of_threads] with the actual number of threads you want to use (8 for the experiments) and [input_file_list] with the file list generated as descripted above.
 
----
+
 
 
 [Google Brain Genomics]: https://console.cloud.google.com/storage/browser/brain-genomics-public/research/deepconsensus/publication/analysis/genome_assembly
