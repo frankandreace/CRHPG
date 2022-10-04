@@ -69,10 +69,10 @@ The parameters used are based on the tools documentation (github page or readthe
 To download Bifrost, visit [bifrost web page][bifrost]. 
 Use the .txt files pro
 To run it, use the 
+
 ```sh
 Bifrost build -r $data_dir/assemblies_all.txt -o $graph_dir/bifrost_graph_all_100time -k 100 -t 8 -v -c
 ```
-
 Replacing the [number_of_threads] with the actual number of threads you want to use (8 for the experiments) and [input_file_list] with the file list generated as descripted above.
 ---
 
@@ -81,6 +81,7 @@ Replacing the [number_of_threads] with the actual number of threads you want to 
 To download mdbg, visit [mdbg web page][mdbg]. 
 To generate the single fasta file for the 2,10 and 104 haplotypes datasets, use the commands specified in the section [dataset][#dgen]
 To run it, use 
+
 ```sh
 ./rust-mdbg/target/release/rust-mdbg [input_dataset.fa] -k 10 -d 0.0001 --minabund 1 --reference --prefix [prefix_name]
 gfatools asm -u  [prefix_name].gfa > [prefix_name].unitigs.gfa
