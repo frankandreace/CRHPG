@@ -130,6 +130,7 @@ The script works with the files organized in this repository as they are. If you
 
 Usage example for each tool.  
 Please, use the [loci_list], [color_scheme] and [selected_region_fasta] provided in the 'loci' subdirectory (same name for same experiment).
+Run them from the CRHPG directory to be sure each file is found!
 
 To replicate HLA-E subgraphs extractions, set   
 [loci_list] = 'HLA-E_exp.loci.txt' 
