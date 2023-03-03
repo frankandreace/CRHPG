@@ -1,5 +1,5 @@
 
-home=../
+home="$(pwd)"
 query=$home/loci
 
 tool=$1
