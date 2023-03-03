@@ -145,29 +145,29 @@ To replicate HLA-A subgraphs extractions, set
 Minigraph pangenome graph:  
 [bandage_reduce_distance] has to be set to 3.
 ```sh
-sh ./scripts/extract_multiple_loci.sh mini [input_graph (without .gfa extension)] [loci_list] [threads] [output_folder] [color_scheme] [selected_region_fasta] [bandage_reduce_distance]
+sh ./scripts/extract_subgraph.sh mini [input_graph (without .gfa extension)] [loci_list] [threads] [output_folder] [color_scheme] [selected_region_fasta] [bandage_reduce_distance]
 ```
 bifrost pangenome graph:  
 [bandage_reduce_distance] has to be set to 3.
 ```sh
-sh ./scripts/extract_multiple_loci.sh dbg [input_graph (without .gfa extension)] [loci_list] [threads] [output_folder] [color_scheme] [selected_region_fasta] [bandage_reduce_distance] bifrost
+sh ./scripts/extract_subgraph.sh dbg [input_graph (without .gfa extension)] [loci_list] [threads] [output_folder] [color_scheme] [selected_region_fasta] [bandage_reduce_distance] bifrost
 ```
 
 mdbg pangenome graph:  
 [bandage_reduce_distance] has to be set to 1.
 ```sh
-sh ./scripts/extract_multiple_loci.sh dbg [input_graph (without .gfa extension)] [loci_list] [threads] [output_folder] [color_scheme] [selected_region_fasta] [bandage_reduce_distance] mdbg
+sh ./scripts/extract_subgraph.sh dbg [input_graph (without .gfa extension)] [loci_list] [threads] [output_folder] [color_scheme] [selected_region_fasta] [bandage_reduce_distance] mdbg
 ```
 
 pggb pangenome graph:  
 ```sh
-sh ./scripts/extract_multiple_loci.sh pggb [input_graph (without .gfa extension)] [loci_list] [threads] [output_folder] [color_scheme] [selected_region_fasta] [fasta_used_to_generate_the_pangenome] [additional_graph_length_in_bases(-c -L of odgi extract)]
+sh ./scripts/extract_subgraph.sh pggb [input_graph (without .gfa extension)] [loci_list] [threads] [output_folder] [color_scheme] [selected_region_fasta] [fasta_used_to_generate_the_pangenome] [additional_graph_length_in_bases(-c -L of odgi extract)]
 
 ```
 
 additional variation graph extraction using Graphaligner and not odgi or minigraph:
 ```sh
-sh ./scripts/extract_multiple_loci.sh ga_vg [input_graph (without .gfa extension)] [loci_list] [threads] [output_folder] [color_scheme] [selected_region_fasta] [bandage_reduce_distance]
+sh ./scripts/extract_subgraph.sh ga_vg [input_graph (without .gfa extension)] [loci_list] [threads] [output_folder] [color_scheme] [selected_region_fasta] [bandage_reduce_distance]
 ```
 
 
