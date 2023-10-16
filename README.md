@@ -15,7 +15,8 @@
 
 
 ## <a name="started"></a>Getting Started
-This repo contains the commands and the script used to generate the pangenome graphs and the regions used in the CRHPG paper. To cite it, please see [here](#cite).  
+This repo contains the commands and the script used to generate the pangenome graphs and the regions used in the CRHPG paper. To cite it, please see [here](#cite). 
+Note: this repository is distributed under MIT licence. See LICENCE.txt for more information.
 The scripts take as granted that the tools have already been installed in the computer/cluster used and the haplotypes have been downloaded.  
 To download the haplotypes, you can go to [Google Brain Genomics website][Google Brain Genomics] and [Human Pangenome Reference Consortium website][Human Pangenome Reference Consortium].   
 Loci sequences are provided in the 'loci' folder of this repo and have been downloaded from the NCBI dataset or [pggb dataset][pggb_dataset].  
